@@ -7,19 +7,32 @@
     <title>Entre em Contato</title>
 </head>
 <body>
-   <form action="" method="">
+   <form action="" method="get">
         <fieldset>
             <legend>Entre em contato</legend>
 
-            <input
-                 type="text"
-                 list="subjectdata">
+                <label for="subject"><b>Assunto:</b></label>
+                
+                <select name="subject-type" id="subject">
+                    <option value="support">Suporte</option>
+                    <option value="suggestion">Sugestão</option>
+                    <option value="complaint">Reclamação</option>
+                </select><br><br>
 
-                 <datalist id="subjectdata">
-                    <option value="Suporte"></option>
-                    <option value="Sugestão"></option>
-                    <option value="Reclamação"></option>
-                 </datalist>
+                <label for="fullname"><b>Nome Completo:</b></label><br>
+                <input id="fullname" type="text" placeholder="Seu nome" name="fullname" autocomplete="family-name"><br><br>
+
+                <label for="email"><b>E-mail:</b></label><br>
+                <input id="email" type="email" placeholder="seuemail@seudominio.com" name="email" autocomplete="email"><br><br>
+
+                <label for="menssage"><b>Mensagem:</b></label><br>
+                <textarea id="menssage" placeholder="Digite sua mensagem aqui" required rows="10" cols="30" name="menssage"></textarea><br><br>
+
+                <input type="checkbox"  id="receive-information" checked name="receive-infrmation">
+                <label for="receive-information">Aceito receber novidades por e-mail</label><br><br>
+
+                <button type="submit">Enviar</button>
+
         </fieldset>
    </form> 
 </body>
